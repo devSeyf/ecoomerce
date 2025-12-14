@@ -1,0 +1,180 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "title": "men",
+      "prefix": "men",
+      "img": "https://placehold.co/600x400/png?text=Men+Collection"
+    },
+    {
+      "id": 2,
+      "title": "women",
+      "prefix": "women",
+      "img": "https://placehold.co/600x400/png?text=Women+Collection"
+    },
+    {
+      "id": 3,
+      "title": "kids",
+      "prefix": "kids",
+      "img": "https://placehold.co/600x400/png?text=Kids+Fashion"
+    },
+    {
+      "id": 4,
+      "title": "baby",
+      "prefix": "baby",
+      "img": "https://placehold.co/600x400/png?text=Baby+Care"
+    },
+    {
+      "id": 5,
+      "title": "sport",
+      "prefix": "sport",
+      "img": "https://placehold.co/600x400/png?text=Sport+Gear"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Men's Classic T-Shirt",
+      "price": 149.00,
+      "cat_prefix": "men",
+      "img": "https://placehold.co/400x500/333/fff/png?text=Men+T-Shirt",
+      "max": 10
+    },
+    {
+      "id": 2,
+      "title": "Men's Denim Jacket",
+      "price": 599.00,
+      "cat_prefix": "men",
+      "img": "https://placehold.co/400x500/333/fff/png?text=Denim+Jacket",
+      "max": 5
+    },
+    {
+      "id": 3,
+      "title": "Men's Chino Pants",
+      "price": 399.00,
+      "cat_prefix": "men",
+      "img": "https://placehold.co/400x500/333/fff/png?text=Chino+Pants",
+      "max": 8
+    },
+    {
+      "id": 4,
+      "title": "Men's Casual Shirt",
+      "price": 299.00,
+      "cat_prefix": "men",
+      "img": "https://placehold.co/400x500/333/fff/png?text=Casual+Shirt",
+      "max": 7
+    },
+    {
+      "id": 5,
+      "title": "Women's Summer Dress",
+      "price": 449.00,
+      "cat_prefix": "women",
+      "img": "https://placehold.co/400x500/e91e63/fff/png?text=Summer+Dress",
+      "max": 6
+    },
+    {
+      "id": 6,
+      "title": "Women's Blouse",
+      "price": 249.00,
+      "cat_prefix": "women",
+      "img": "https://placehold.co/400x500/e91e63/fff/png?text=Women+Blouse",
+      "max": 12
+    },
+    {
+      "id": 7,
+      "title": "Women's Skirt",
+      "price": 199.00,
+      "cat_prefix": "women",
+      "img": "https://placehold.co/400x500/e91e63/fff/png?text=Skirt",
+      "max": 9
+    },
+    {
+      "id": 8,
+      "title": "Women's Handbag",
+      "price": 599.00,
+      "cat_prefix": "women",
+      "img": "https://placehold.co/400x500/e91e63/fff/png?text=Handbag",
+      "max": 4
+    },
+    {
+      "id": 9,
+      "title": "Kids' Hoodie",
+      "price": 299.00,
+      "cat_prefix": "kids",
+      "img": "https://placehold.co/400x500/ff9800/fff/png?text=Kids+Hoodie",
+      "max": 15
+    },
+    {
+      "id": 10,
+      "title": "Kids' Denim Shorts",
+      "price": 199.00,
+      "cat_prefix": "kids",
+      "img": "https://placehold.co/400x500/ff9800/fff/png?text=Denim+Shorts",
+      "max": 10
+    },
+    {
+      "id": 11,
+      "title": "Baby Onesie",
+      "price": 149.00,
+      "cat_prefix": "baby",
+      "img": "https://placehold.co/400x500/03a9f4/fff/png?text=Baby+Onesie",
+      "max": 20
+    },
+    {
+      "id": 12,
+      "title": "Baby Soft Toy",
+      "price": 99.00,
+      "cat_prefix": "baby",
+      "img": "https://placehold.co/400x500/03a9f4/fff/png?text=Soft+Toy",
+      "max": 10
+    },
+    {
+      "id": 13,
+      "title": "Sport Running Shoes",
+      "price": 899.00,
+      "cat_prefix": "sport",
+      "img": "https://placehold.co/400x500/4caf50/fff/png?text=Running+Shoes",
+      "max": 5
+    },
+    {
+      "id": 14,
+      "title": "Sport Yoga Mat",
+      "price": 299.00,
+      "cat_prefix": "sport",
+      "img": "https://placehold.co/400x500/4caf50/fff/png?text=Yoga+Mat",
+      "max": 8
+    },
+    {
+      "id": 15,
+      "title": "Sport Dumbbells",
+      "price": 499.00,
+      "cat_prefix": "sport",
+      "img": "https://placehold.co/400x500/4caf50/fff/png?text=Dumbbells",
+      "max": 6
+    },
+    {
+      "id": 16,
+      "title": "Men's Sneakers",
+      "price": 699.00,
+      "cat_prefix": "men",
+      "img": "https://placehold.co/400x500/333/fff/png?text=Sneakers",
+      "max": 5
+    },
+    {
+      "id": 17,
+      "title": "Women's Heels",
+      "price": 799.00,
+      "cat_prefix": "women",
+      "img": "https://placehold.co/400x500/e91e63/fff/png?text=Heels",
+      "max": 7
+    },
+    {
+      "id": 18,
+      "title": "Kids' Backpack",
+      "price": 349.00,
+      "cat_prefix": "kids",
+      "img": "https://placehold.co/400x500/ff9800/fff/png?text=Backpack",
+      "max": 12
+    }
+  ]
+}
