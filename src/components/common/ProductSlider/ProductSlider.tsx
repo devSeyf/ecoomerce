@@ -9,11 +9,13 @@ type ProductSliderProps = {
     products: TProduct[];
 };
 
+import styles from "./ProductSlider.module.css";
+
 const ProductSlider = ({ products }: ProductSliderProps) => {
     return (
         <Swiper
             slidesPerView={1}
-            spaceBetween={10}
+            spaceBetween={15}
             navigation={true}
             pagination={{
                 clickable: true,
@@ -33,8 +35,7 @@ const ProductSlider = ({ products }: ProductSliderProps) => {
                 },
             }}
             modules={[Navigation, Pagination]}
-            className="mySwiper p-3"
-            style={{ paddingBottom: "3rem" }}
+            className={styles.root}
         >
             {products.map((product) => (
                 <SwiperSlide key={product.id}>

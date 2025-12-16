@@ -26,7 +26,7 @@ const ProductInfo = ({
       </div>
       <div className={`${styles[`productInfo-${direction}`]}`}>
         <h2 title={title}>{title}</h2>
-        <h3>{Number(price).toFixed(2)} EGP</h3>
+        <h3>${Number(price).toFixed(2)}</h3>
         {quantity && <h3>Total Quantity: {quantity}</h3>}
         {quantity && <h3>Price Total: {(quantity * Number(price)).toFixed(2)}</h3>}
 

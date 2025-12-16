@@ -1,2 +1,2 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:5005";
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5005";

@@ -41,6 +41,16 @@ const cartSlice = createSlice({
     cleanCartProductsFullInfo: (state) => {
       state.productsFullInfo = [];
     },
+    cleanCartItems: (state) => {
+      // Remove items from state.items if they are not in state.productsFullInfo
+      // This runs after we successfully fetch product info, ensuring we don't count ghost items.
+      const validIds = new Set(state.productsFullInfo.map((p) => p.id));
+      Object.keys(state.items).forEach((itemId) => {
+        if (!validIds.has(Number(itemId))) {
+          delete state.items[itemId];
+        }
+      });
+    },
     clearCartAfterPlaceOrder: (state) => {
       state.items = {};
       state.productsFullInfo = [];
@@ -71,6 +81,7 @@ export const {
   cartItemChangeQuantity,
   cartItemRemove,
   cleanCartProductsFullInfo,
+  cleanCartItems,
   clearCartAfterPlaceOrder,
 } = cartSlice.actions;
 

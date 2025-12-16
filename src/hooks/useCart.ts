@@ -5,6 +5,8 @@ import {
   cartItemChangeQuantity,
   cartItemRemove,
   cleanCartProductsFullInfo,
+  cleanCartItems,
+  clearCartAfterPlaceOrder,
 } from "@store/cart/cartSlice";
 import { resetOrderStatus } from "@store/orders/ordersSlice";
 
@@ -33,13 +35,19 @@ const useCart = () => {
     [dispatch]
   );
 
-  const products = productsFullInfo.map((el) => ({
-    ...el,
-    quantity: items[el.id],
-  }));
+  const products = productsFullInfo
+    .map((el) => ({
+      ...el,
+      quantity: items[el.id],
+    }))
+    .filter((el) => el.quantity !== undefined);
 
   useEffect(() => {
     const promise = dispatch(actGetProductsByItems());
+
+    promise.unwrap().then(() => {
+      dispatch(cleanCartItems());
+    });
 
     return () => {
       promise.abort();
@@ -47,6 +55,10 @@ const useCart = () => {
       dispatch(resetOrderStatus());
     };
   }, [dispatch]);
+
+  const clearCartHandler = () => {
+    dispatch(clearCartAfterPlaceOrder());
+  };
 
   return {
     loading,
@@ -56,6 +68,7 @@ const useCart = () => {
     placeOrderStatus,
     changeQuantityHandler,
     removeItemHandler,
+    clearCartHandler,
   };
 };
 

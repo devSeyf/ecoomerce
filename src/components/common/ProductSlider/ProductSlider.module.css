@@ -1,0 +1,72 @@
+.root {
+    padding-bottom: 3rem !important;
+    /* Make space for pagination */
+    padding-left: 4px;
+    /* Avoid cutting off shadows */
+    padding-right: 4px;
+}
+
+/* Pagination Dots - target specific structure within root */
+.root :global(.swiper-pagination) {
+    bottom: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.root :global(.swiper-pagination-bullet) {
+    background: var(--text-muted, #ccc);
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+}
+
+.root :global(.swiper-pagination-bullet-active) {
+    background: var(--accent, #000);
+    opacity: 1;
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* Navigation Arrows */
+.root :global(.swiper-button-prev),
+.root :global(.swiper-button-next) {
+    color: var(--primary, #000);
+    background: rgba(255, 255, 255, 0.9);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+    margin-top: -22px;
+    /* Center vertical fix if needed */
+}
+
+.root :global(.swiper-button-prev):after,
+.root :global(.swiper-button-next):after {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.root :global(.swiper-button-prev):hover,
+.root :global(.swiper-button-next):hover {
+    background: var(--accent, blue);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Position adjustments - move them out slightly so they don't cover content */
+.root :global(.swiper-button-prev) {
+    left: 0px;
+    margin-left: 0px;
+    /* Reset */
+}
+
+.root :global(.swiper-button-next) {
+    right: 0px;
+    margin-right: 0px;
+}

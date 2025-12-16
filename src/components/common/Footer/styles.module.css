@@ -1,6 +1,7 @@
 .footerContainer {
-  margin-top: auto;
+  margin-top: 5rem;
+  /* Increased margin */
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: #f7f7fa;
 }

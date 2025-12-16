@@ -1,4 +1,4 @@
-import { HomeSlider, ProductSlider, Heading } from "@components/common";
+import { HomeSlider, ProductSlider, Heading, SpecialOffers } from "@components/common";
 import { Loading } from "@components/feedback";
 import useProducts from "@hooks/useProducts";
 import { motion } from "motion/react";
@@ -18,6 +18,8 @@ const Home = () => {
         {/* Show all products but limit/slice if needed, or pass all to slider */}
         <ProductSlider products={productsFullInfo.slice(0, 10)} />
       </Loading>
+
+      <SpecialOffers products={productsFullInfo} />
 
       <div className="mt-5">
         <Heading title="New Arrivals" />

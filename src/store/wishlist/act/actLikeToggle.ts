@@ -5,17 +5,18 @@ import { axiosErrorHandler } from "@utils";
 const actLikeToggle = createAsyncThunk(
   "wishlist/actLikeToggle",
   async (id: number, thunkAPI) => {
-    const { rejectWithValue } = thunkAPI;
+    const { rejectWithValue, getState } = thunkAPI;
+    const { auth } = getState() as any; // Need to import RootState properly or cast
     try {
       const isRecordExist = await axios.get(
-        `/wishlist?userId=1&productId=${id}`
+        `/wishlist?userId=${auth.user.id}&productId=${id}`
       );
 
       if (isRecordExist.data.length > 0) {
         await axios.delete(`/wishlist/${isRecordExist.data[0].id}`);
         return { type: "remove", id };
       } else {
-        await axios.post("/wishlist", { userId: 1, productId: id });
+        await axios.post("/wishlist", { userId: auth.user.id, productId: id });
         return { type: "add", id };
       }
     } catch (error) {

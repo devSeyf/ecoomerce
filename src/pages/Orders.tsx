@@ -21,7 +21,7 @@ const Orders = () => {
         <Modal.Header closeButton>
           <Modal.Title>Products Details</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ maxHeight: "500px", overflowY: "auto" }}>
           {selectedProduct.map((el) => (
             <ProductInfo
               key={el.id}
@@ -60,7 +60,7 @@ const Orders = () => {
                     Product Details
                   </span>
                 </td>
-                <td>{el.subtotal.toFixed(2)}</td>
+                <td>${el.subtotal.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>

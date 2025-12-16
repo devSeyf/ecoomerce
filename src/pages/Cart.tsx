@@ -12,6 +12,7 @@ const Cart = () => {
     placeOrderStatus,
     changeQuantityHandler,
     removeItemHandler,
+    clearCartHandler,
   } = useCart();
 
   return (
@@ -20,6 +21,15 @@ const Cart = () => {
       <Loading status={loading} error={error} type="cart">
         {products.length ? (
           <>
+            <div className="d-flex justify-content-end mb-3">
+              <div
+                className="text-danger"
+                style={{ cursor: "pointer", fontWeight: "bold", textDecoration: "underline" }}
+                onClick={clearCartHandler}
+              >
+                Remove All Items
+              </div>
+            </div>
             <CartItemList
               products={products}
               changeQuantityHandler={changeQuantityHandler}

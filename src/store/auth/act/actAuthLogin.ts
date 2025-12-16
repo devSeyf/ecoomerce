@@ -23,8 +23,18 @@ const actAuthLogin = createAsyncThunk(
     const { rejectWithValue } = thunk;
 
     try {
-      const res = await axios.post<TResponse>("/login", formData);
-      return res.data;
+      const res = await axios.get<TResponse["user"][]>(
+        `/users?email=${formData.email}&password=${formData.password}`
+      );
+
+      if (res.data.length > 0) {
+        return {
+          user: res.data[0],
+          accessToken: "fake-jwt-token-for-development",
+        };
+      } else {
+        throw new Error("Incorrect email or password");
+      }
     } catch (error) {
       return rejectWithValue(axiosErrorHandler(error));
     }
